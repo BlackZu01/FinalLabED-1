@@ -1,6 +1,6 @@
 import numpy as np
-from classes import LinkedList
-from classes import Stack
+from package.linked_list import LinkedList
+from package.stack import Stack
 
 matrix = np.zeros((3, 3), dtype=int)
 
