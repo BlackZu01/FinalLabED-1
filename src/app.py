@@ -54,14 +54,18 @@ for i in range(matrix_stack.shape[1]):
 p = stack.head
 for k in range(matrix_stack.shape[0]):
     for j in range(matrix_stack.shape[1]):
+        print(p.data)
         p.nextCol.addNodeStack(matrix_stack[j][k])
-    p = p.nextCol.head
+        if p == None:
+            break 
+    p = p.next
 
 print('La matriz es ')
 printMat(matrix_stack)
 
 print('\nY la lista: ')
-print(stack.head.nextCol)
+print(stack.tail.nextCol.head.next)
 
-print(stack.head.nextCol.head.nextCol)
-print(stack.head.nextCol.head.nextCol.head.nextCol)
+print()
+print()
+print('===========================')

@@ -40,8 +40,8 @@ class Stack:
             self.tail = P 
             self.tail.next = None 
             return 
-        P.next = self.head 
-        self.head = P
+        self.tail.next = P 
+        self.tail = self.tail.next
 
     @property 
     def values(self):
