@@ -4,5 +4,4 @@
 :gorilla: Moises Torres
 :penguin: Jesus Zuluaga 
 
-
-#La version final del lab esta en la carpeta GUI
+La version final del lab esta en la carpeta GUI
