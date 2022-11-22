@@ -182,3 +182,8 @@ def Determinat(Mat1: LinkedList()) -> int:
         return round(det)
     else:
         return 'La matrix no es nxn'
+
+def multiplywithn(Mat1: LinkedList(), n: int) -> LinkedList():
+    for node1 in Mat1:
+        node1.valor = node1.valor * n
+    return Mat1

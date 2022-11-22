@@ -6,7 +6,7 @@ from classes import *
 class App(ttk.Frame):
     def __init__(self, ventana):
         super().__init__(ventana)
-
+        
         self.dato = tk.StringVar()
         self.nombre_archivo = ttk.Label(ventana, text='Nombre del archivo: ')
         self.nombre_archivo.place(x=20, y=23)
@@ -17,7 +17,17 @@ class App(ttk.Frame):
 
         self.nota = ttk.Label(ventana, 
                               text='Nota: Sólo ingrese el nombre de archivo 2 si va a \nrealizar operaciones como (suma, resta, multiplicación)')
-        self.nota.place(x=20 , y=100)
+        self.nota.place(x=20 , y=130)
+
+        self.escalar = tk.StringVar()
+        self.escalar_texto = ttk.Label(ventana, text='Escalar: ')
+        self.escalar_texto.place(x=20, y=105)
+
+        self.escalar_caja = ttk.Entry(ventana, textvariable=self.escalar)
+        self.escalar_caja.place(x=170, y=100, width=150, height=27)
+        self.boton_nombre3 = ttk.Button(ventana, text= 'Enviar')
+        self.boton_nombre3.place(x= 330, y=100)
+
 
         self.caja_nombre = ttk.Entry(ventana, textvariable=self.dato)
         self.caja_nombre.place(x=170, y=20, width=150, height=27)
@@ -32,19 +42,22 @@ class App(ttk.Frame):
         self.boton_nombre2.place(x= 330, y=60)
 
         self.opciones = ttk.Label(ventana, text=' OPCIONES')
-        self.opciones.place(x = 300, y=160)
+        self.opciones.place(x = 300, y=200)
 
         self.suma = ttk.Button(ventana, text='Suma', command=self.suma)
-        self.suma.place(x=130, y=200)
+        self.suma.place(x=130, y=230)
 
         self.resta = ttk.Button(ventana, text='Resta', command=self.resta)
-        self.resta.place(x=230, y=200)
+        self.resta.place(x=230, y=230)
 
         self.mult = ttk.Button(ventana, text='Multiplicación', command=self.mult)
-        self.mult.place(x=330, y=200)
+        self.mult.place(x=330, y=230)
 
         self.det = ttk.Button(ventana, text='Determinante', command=self.determinante)
-        self.det.place(x=450, y=200)
+        self.det.place(x=450, y=230)
+
+        self.det = ttk.Button(ventana, text='Escalar', command=self.escalarProd)
+        self.det.place(x=280, y=270)
 
         self.det_text = ttk.Label(ventana, 
                                   text='Determinante: ')
@@ -95,6 +108,14 @@ class App(ttk.Frame):
         self.lista.Mat_to_list(self.matrix_uno)
         self.deter = Determinat(self.lista)
         self.det_text.config(text=f'Determinante: {self.deter}')
+
+    def escalarProd(self):
+        self.matrix_uno = np.loadtxt(self.dato.get())
+        self.lista = LinkedList()
+        self.lista.Mat_to_list(self.matrix_uno)
+        self.escalarprod = multiplywithn(self.lista, int(self.escalar.get()))
+        np.savetxt('MultiplicacionEscalar.txt', self.lista.List_to_Mat(), fmt='% 4d')
+        
 
 ventana = tk.Tk()
 ventana.title('Operaciones con matrices')
