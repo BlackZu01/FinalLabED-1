@@ -1,2 +1,5 @@
 # FinalLabED-1
-This repo is to save the last ED-1 lab
+:orangutan: Luis Fernandez
+:chipmunk: Eliana Rodíprguez
+:gorilla: Moises Torres
+:penguin: Jesus Zuluaga
