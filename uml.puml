@@ -1,0 +1,25 @@
+@startuml Lab
+
+class Node {
+   
+   value: list
+   next_node: Node
+   prev_node: Node
+   
+
+}
+
+class LinkedList {
+
+   values: list
+
+   + add_node(value: list)
+   + add_multiple_nodes(values: list)
+   + deletenode(node: Node)
+   + Mat_to_list(mat: Matrix)
+   + List_to_Mat()
+}
+
+LinkedList *-- Node
+
+@enduml
