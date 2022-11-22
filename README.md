@@ -3,4 +3,4 @@
 :chipmunk: Eliana Rodríguez
 :gorilla: Moises Torres
 :penguin: Jesus Zuluaga \newline
-La version final del lab esta en la carpeta GUI
+#La version final del lab esta en la carpeta GUI
