@@ -1,5 +1,5 @@
 # FinalLabED-1
-:orangutan: Luis Fernandez
+:orangutan: Luis Fernández
 :chipmunk: Eliana Rodríguez
-:gorilla: Moises Torres
+:gorilla: Moíses Torres
 :penguin: Jesus Zuluaga
